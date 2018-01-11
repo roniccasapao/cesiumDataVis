@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DataVisualization</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./Source/Widgets/BaseLayerPicker/BaseLayerPicker.css" />
+
+    <link rel="stylesheet" type="text/css" href="./Assets/css/mainStyle.css" />
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+</head>
+
+<body>
+    <div class="loading">Loading&#8230;</div>
+    <div id="sideNav" class="drawer container sidebar-overlay overlay">
+        <div class="row">
+            <button type="button" class="sideNavtrigger close offset-md-11" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="dataControls row">
+            <label for="rcountryDropdown" class="col-3 col-form-label">Exporter:</label>
+            <div class="col-9">
+                <select id="rcountryDropdown" name="countries" class="custom-select" data-live-search="true"></select>
+            </div>
+
+            <label for="yearDropdown" class="col-3 col-form-label">Year:</label>
+            <div class="col-9">
+                <select id="yearDropdown" name="year" class="custom-select" disabled="disabled"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 noDataMessage">
+                <span class="text-danger">No data available</span>
+            </div>
+            <div id="overlay-tabs" class="col-md-12 info-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="#topTradesTab" class="nav-link active" data-toggle="tab">Trade Flows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#topCommoditiesTab" class="nav-link" data-toggle="tab">Commodities</a>
+                    </li>
+                </ul>
+                <div class="tab-content clearfix">
+
+                    <div class="tab-pane active" id="topTradesTab">
+                        <div id="topTrades"></div>
+                    </div>
+                    <div class="tab-pane" id="topCommoditiesTab">
+                        <div id="topCommodities"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="sideNavOpenTrigger sideNavtrigger">&#9776;</span>
+    <div id="baseLayerPickerContainer"></div>
+    <div id="cesiumContainer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+    <script src="./Build/Cesium/Cesium.js"></script>
+    <script type="text/javascript" src="./Assets/plugins/slidereveal.js"></script>
+
+    <script type="text/javascript" src="./Assets/js/helpers.js"></script>
+    <script type="text/javascript" src="./Assets/js/data.util.js"></script>
+    <script type="text/javascript" src="./Assets/js/map.util.js"></script>
+    <script type="text/javascript" src="./Assets/js/index.js"></script>
+</body>
+
+</html>

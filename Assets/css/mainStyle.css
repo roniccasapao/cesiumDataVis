@@ -1,0 +1,88 @@
+@import url(../../Build/Cesium/Widgets/widgets.css);
+@import url(./loadingSpinner.css);
+
+/* CESIUM STYLES  */
+
+html, body, #cesiumContainer {
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+}
+
+#sceneModePickerContainer{
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    width:38px;
+    height:38px;
+    z-index: 2;
+}
+
+#baseLayerPickerContainer{
+    position: absolute;
+    top: 45px;
+    right: 5px;
+    width:38px;
+    height:38px;
+    z-index: 2;
+}
+
+/* CESIUM STYLEEND  */
+
+.sideNavOpenTrigger{
+    z-index: 1;
+    font-size:30px;
+    color: #fff;
+    position: absolute;
+    padding-left:10px;
+}
+
+.sideNavtrigger{
+    cursor:pointer;
+}
+
+.dataControls{
+    padding-top: 10px;
+}
+
+.overlay{
+    position: absolute;
+    z-index: 2;
+}
+
+.sidebar-overlay{
+    display: none;   
+    background: #01579B;
+    max-width: 350px;
+    height: 100%;
+    font-size: 14px;
+    font-family: Tahoma;
+}
+
+.info-tabs{
+    display:none;
+    padding-top: 10px;
+}
+
+/* TABS */
+
+#overlay-tabs .nav-link {
+    color: #fff;
+    padding: 8px;
+}
+
+#overlay-tabs .nav-link.active {
+    background-color: #428bca;
+}
+
+.tab-content {
+  color : white;
+  padding : 5px 15px;
+}
+
+.noDataMessage{
+    display: none;
+    padding: 16px;
+}
